@@ -30,7 +30,7 @@ Yield Curve (extension): 2s10s & 3m10y slope regimes to steer Gold vs UST; easil
 
 Cross‑Asset & FX (extension): USD index, oil/copper basket, USD/CHF as safe‑haven overlay.
 
-spx-regime-hedging/
+'''spx-regime-hedging/
 ├─ notebooks/
 │  ├─ Hedging (7).ipynb           # main end-to-end notebook (presentation-ready)
 │  ├─ Hedging (IBKR).ipynb        # IBKR pull + merge (Gateway 4002), optional
