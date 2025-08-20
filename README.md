@@ -30,22 +30,34 @@ Yield Curve (extension): 2s10s & 3m10y slope regimes to steer Gold vs UST; easil
 
 Cross‑Asset & FX (extension): USD index, oil/copper basket, USD/CHF as safe‑haven overlay.
 
-'''spx-regime-hedging/
-├─ notebooks/
-│  ├─ Hedging (7).ipynb           # main end-to-end notebook (presentation-ready)
-│  ├─ Hedging (IBKR).ipynb        # IBKR pull + merge (Gateway 4002), optional
-│  └─ Extensions - YieldCurve + CrossAsset.ipynb  # optional add-ons
-├─ data/
-│  ├─ raw/
-│  │  └─ Data_310725.xlsx         # provided Excel/CSV (macro, prices, yield)
-│  └─ processed/                  # intermediates (auto-created)
-├─ src/
-│  ├─ hedging/
-│  │  ├─ regimes.py               # regime tagging (GDP/CPI rules)
-│  │  ├─ hedges.py                # gamma calc, CVaR/MaxDD metrics
-│  │  ├─ markov.py                # transition matrix, mixture moments
-│  │  ├─ sector_rotation.py       # momentum + defensive blend
-│  │  └─ ibkr_io.py               # robust IBKR helpers (optional)
-├─ README.md
-├─ environment.yml                # conda env (recommended)
-└─ requirements.txt               # pip alternative
+# Economic Hedge Regimes
+
+## Overview
+This project analyzes economic regimes based on growth and inflation trends, and tests cross-asset hedges for the S&P 500.  
+Hedges include:  
+- Gold  
+- US Treasuries (USTs)  
+- USD Index  
+- Commodities basket (oil, copper)  
+- Safe haven currency (USD/CHF)  
+
+## Methodology
+1. Define economic regimes (e.g., Growth ↑ / Inflation ↑).  
+2. Test hedge performance in each regime.  
+3. Overlay macro cycle (FOMC rate hike/cut periods).  
+4. Compare hedge effectiveness using Sharpe ratio and drawdown.  
+
+## Data
+- Provided Excel inputs (Macro, Prices, Yield sheets).  
+- Supplemented with public data where needed (USD index, commodities, FX).  
+
+## Results
+- Summary of hedge performance by regime.  
+- Visualization of returns, drawdowns, and correlations.  
+
+## Extensions
+- Incorporate USD/CHF as primary safe haven hedge.  
+- Add machine learning classification of regimes.  
+- Explore dynamic hedge weights instead of static.  
+
+## Repository Structure
