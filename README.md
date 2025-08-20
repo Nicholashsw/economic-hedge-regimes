@@ -10,71 +10,19 @@ What’s inside
 
 Regime Definition: CPI YoY vs 12‑m mean; GDP YoY vs 24‑m mean → Goldilocks / Reflation / Disinflation / Stagflation.
 
-Hedge Engine: Basket 
-𝐻
-(
-𝑤
-)
-=
-𝑤
-⋅
-Gold
-+
-(
-1
-−
-𝑤
-)
-⋅
-UST
-H(w)=w⋅Gold+(1−w)⋅UST, hedge ratio
+Hedge Engine: 
+Basket 𝐻(𝑤)=𝑤⋅Gold+(1−𝑤)⋅UST, hedge ratio
 
-𝛾
-\*
-(
-𝑤
-)
-=
-−
-C
-o
-v
-(
-𝑆
-,
-𝐻
-)
-/
-V
-a
-r
-(
-𝐻
-)
-γ
-\*
-(w)=−Cov(S,H)/Var(H).
+𝛾\*(𝑤)=−Cov(𝑆,𝐻)/Var(𝐻)
 
 Risk Objectives: Variance‑min, CVaR(5%)‑min, MaxDD‑min per regime.
 
 Visuals: Variance‑reduction heatmaps, w–γ–variance 3D surfaces, rolling correlations, regime timelines.
 
 Markov Portfolio Optimization: Transition matrix 
-𝑃
-P, 
-𝑃
-6
-P
-6
- (6‑month), expected hedged variance vs 
-𝑤
-w (1M vs 6M), optimal 
-𝑤
-,
-𝛾
-w,γ by horizon.
+𝑃, 𝑃^6 (6‑month), expected hedged variance vs 𝑤 (1M vs 6M), optimal 𝑤,𝛾 by horizon.
 
-Sector Rotation (IBKR‑first): 12‑1 momentum + inverse‑vol, defensive blend (XLP/XLU/XLV) in Risk‑Off; optional GLD/IEF overlay.
+Sector Rotation: 12‑1 momentum + inverse‑vol, defensive blend (XLP/XLU/XLV) in Risk‑Off; optional GLD/IEF overlay.
 
 IBKR Integration: Robust historical pulls (Gateway 4002), delayed data support, pacing, safe merges with your Excel.
 
